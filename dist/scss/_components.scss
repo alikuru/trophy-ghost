@@ -24,15 +24,17 @@
   ul {
     list-style-type: none;
   }
-  
+
   &__item {
     cursor: pointer;
+    text-shadow: 2px 2px $color-white;
 
     &:not(.active) {
       @include border-slide();
     }
 
     &.active {
+      color: $color-black;
       border-bottom: 3px solid $color-alpha;
     }
   }
@@ -65,19 +67,22 @@
     width: 100%;
     padding: 2em;
 
-    color: $color-white;
+    color: $color-alpha;
+    text-shadow: 2px 2px $color-white;
 
     span {
       @extend %letter-spacing;
 
       font-family: $font-body;
+      text-shadow: 1px 1px $color-white;
     }
   }
 }
 
 .preview {
   transition: background-color 0.2s ease-in-out;
-  
+  text-shadow: 2px 2px $color-white;
+
   &:nth-child(even) {
     background-color: $color-white;
   }
@@ -88,6 +93,7 @@
     .preview__more {
       box-shadow: inset 175px 0 0 0 $color-alpha;
       color: $color-white;
+      text-shadow: none;
     }
   }
 
@@ -149,7 +155,7 @@
 .card {
 
   &__link {
-    @include box-shadow(1px);
+    @include box-shadow(1px, $color-white);
 
     position: relative;
 
@@ -159,7 +165,7 @@
     transition: background-color 0.2s ease-in-out;
 
     &:after {
-      @include box-shadow(3px);
+      @include box-shadow(3px, $color-alpha--light);
 
       content: '';
       position: absolute;
@@ -180,7 +186,7 @@
       &:after {
         opacity: 1;
       }
-      
+
       .card__more {
         box-shadow: inset 175px 0 0 0 $color-alpha;
         color: $color-white;
@@ -234,8 +240,8 @@
 
     padding: 2em 0;
 
-    color: $color-white;
-    background-color: $color-black;
+    color: $color-black;
+    background-color: $color-white;
     transition: background-color 0.4s ease-in-out;
 
     &:hover {
@@ -272,7 +278,7 @@
 
     & > *:not(:last-child) {
       margin-right: 1em;
-    }    
+    }
   }
 }
 
@@ -285,8 +291,9 @@
 
   height: 20em;
 
-  color: $color-white;
-  background-color: $color-black;
+  color: $color-alpha;
+  background-color: $color-white;
+  text-shadow: 2px 2px $color-white;
 
   @media (min-width: $mq-sm) {
     height: 35em;
@@ -320,6 +327,10 @@
       width: 75%;
     }
   }
+
+  span {
+    text-shadow: 1px 1px $color-white;
+  }
 }
 
 /**
@@ -337,6 +348,7 @@
   align-items: center;
 
   font-family: $font-body;
+  text-shadow: 1px 1px $color-white;
 
   @media (min-width: $mq-sm) {
     left: 2em;
@@ -358,22 +370,22 @@
   }
 
   &--black {
-    color: $color-black;
-
-    &:hover,
-    &:active,
-    &:focus {
-      color: $color-black;
-    }
-  }
-
-  &--white {
     color: $color-white;
 
     &:hover,
     &:active,
     &:focus {
       color: $color-white;
+    }
+  }
+
+  &--white {
+    color: $color-alpha;
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: $color-alpha;
     }
   }
 }
@@ -387,6 +399,9 @@
   margin: 0 auto;
 
   font-family: $font-post;
+  text-shadow: 2px 2px $color-white;
+
+  color: $color-text;
 
   @media (min-width: $mq-md) {
     width: 55%;
@@ -396,9 +411,12 @@
     margin-bottom: 0;
   }
 
-  h1, 
-  h2 {
+  h1,
+  h2,
+  h3 {
     line-height: 1.2;
+    color: $color-alpha;
+    text-shadow: 2px 2px $color-white;
   }
 
   ol, ul {
@@ -423,19 +441,23 @@
     list-style-type: none;
     counter-reset: li;
 
-    & > li:before { 
+    & > li:before {
       content: counter(li) ".";
 
       counter-increment: li;
     }
   }
 
-  p:first-child {
-    font-size: 1.25em;
+  p {
+    text-shadow: 1px 1px $color-white;
+
+    &:first-child {
+      font-size: 1.25em;
+    }
   }
 
   a {
-    border-bottom: 1px solid $color-alpha;
+    border-bottom: 2px solid $color-alpha;
   }
 
   img {
@@ -467,12 +489,14 @@
   margin: 0 auto;
   padding-bottom: 4em;
 
+  color: $color-black;
+
   @media (min-width: $mq-lg) {
     width: 55%;
   }
 
   &__card {
-    @include box-shadow(1px);
+    @include box-shadow(1px, $color-white);
 
     display: flex;
     flex-direction: column;
@@ -537,10 +561,11 @@
     height: 25em;
     padding: 6em 0;
 
-    color: $color-white;
+    color: $color-alpha;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50%;
+    text-shadow: 1px 1px $color-white;
 
     &:after {
       @extend %overlay;

@@ -5,9 +5,9 @@ $font-header: 'Space Mono', monospace;
 $font-body: 'Inconsolata', monospace;
 $font-post: 'Lora', serif;
 
-/* Blue
-$color-alpha: #08c; */
-$color-alpha: #4e7d4e;
+/* Green
+$color-alpha: #4e7d4e; */
+$color-alpha: #08c;
 $color-alpha--light: #2c3440;
 
 $color-black: #dbe6eb;
@@ -130,10 +130,12 @@ img {
 
 blockquote {
   margin: 2em 0;
+  padding: 0.4em 0.2em 0.1em 1.10em;
 
   font-family: $font-header;
   font-weight: 700;
-  font-size: 1.25em;
+  font-size: 1.10em;
+  background-color: $color-white;
 }
 
 cite {

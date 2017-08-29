@@ -630,6 +630,7 @@
 
 .video-container {
   position: relative;
+  margin-bottom: 1em;
   padding-bottom: 56.25%;
   padding-top: 30px;
   height: 0;
@@ -645,4 +646,10 @@
   left: 0;
   width: 100%;
   height: 100%;
+}
+
+/* Styling for inline code snippets */
+code {
+  background: $color-alpha;
+  padding: .2em .4em;
 }

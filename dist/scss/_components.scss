@@ -488,7 +488,7 @@
   width: 90%;
   max-width: $mq-md;
   margin: 0 auto;
-  padding-bottom: 4em;
+  padding-bottom: 2em;
 
   color: $color-black;
 
@@ -547,6 +547,24 @@
     & > *:not(:last-child) {
       margin-right: 1em;
     }
+  }
+}
+
+/*
+* Disqus
+*/
+#disqus_thread {
+  width: 90%;
+  max-width: $mq-md;
+  margin: 0 auto;
+
+  font-family: $font-post;
+  text-shadow: 2px 2px $color-white;
+
+  color: $color-text;
+
+  @media (min-width: $mq-md) {
+    width: 55%;
   }
 }
 

@@ -558,10 +558,10 @@
   max-width: $mq-md;
   margin: 0 auto;
 
-  font-family: $font-post;
+  font-family: $font-body;
   text-shadow: 2px 2px $color-white;
 
-  color: $color-text;
+  color: $color-text !important;
 
   @media (min-width: $mq-md) {
     width: 55%;

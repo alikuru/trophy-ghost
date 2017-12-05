@@ -398,8 +398,14 @@
   }
 
   h1, 
-  h2 {
+  h2,
+  h3,
+  h4 {
     line-height: 1.2;
+  }
+
+  h4 {
+    padding-bottom: 0.6em;
   }
 
   ol, ul {
@@ -431,9 +437,11 @@
     }
   }
 
+  /*
   p:first-child {
     font-size: 1.25em;
   }
+  */
 
   a {
     border-bottom: 1px solid $color-alpha;
@@ -466,7 +474,7 @@
   width: 90%;
   max-width: $mq-md;
   margin: 0 auto;
-  padding-bottom: 4em;
+  padding-bottom: 2em;
 
   @media (min-width: $mq-lg) {
     width: 55%;
@@ -523,6 +531,21 @@
     & > *:not(:last-child) {
       margin-right: 1em;
     }
+  }
+}
+
+/*
+* Disqus
+*/
+#disqus_thread {
+  width: 90%;
+  max-width: $mq-md;
+  margin: 0 auto;
+
+  font-family: $font-body;
+
+  @media (min-width: $mq-md) {
+    width: 55%;
   }
 }
 
@@ -599,4 +622,26 @@
     padding-left: 1em;
     padding-right: 1em;
   }
+}
+
+/* Responsive video embed */
+
+.video-container {
+  position: relative;
+  margin-bottom: 1em;
+  padding-bottom: 56.25%;
+  padding-top: 30px;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+}
+
+.video-container iframe,
+.video-container object,
+.video-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }

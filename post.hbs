@@ -7,18 +7,18 @@
   <header class="section-padding--lg mast rellax" data-rellax-speed="-4">
     <a class="nav nav--white" href="{{@blog.url}}">
       <i class="fa fa-lg fa-arrow-left"></i>
-      <span>Back to Posts</span>
+      <span lang='tr'>Ana Sayfaya Dön</span>
     </a>
     <figure class="absolute-bg mast__img" style="background-image: url('{{img_url feature_image absolute="true"}}');"></figure>
     <div class="mast__container">
-      <span><time datetime="{{date format="YYYY-MM-DD"}}">{{date format="MMM D, YYYY"}}</time></span>
+      <span><time class="mast__container__date" datetime="{{date format="YYYY-MM-DD"}}">{{date format="MMM D, YYYY"}}</time></span>
       <h1>{{title}}</h1>
       {{#if tags}}
         <span>
           {{#author}}
             <a href="{{url}}">{{name}}</a>
           {{/author}}
-          in {{tags}}
+          / {{tags}}
         </span>
       {{/if}}
     </div>
@@ -72,7 +72,7 @@
   <section class="next">
     <a class="next__link" href="{{url}}" style="background-image: url('{{img_url feature_image absolute="true"}}');">
       <div class="next__container">
-        <span>Read Next</span>
+        <span lang='tr'>Sonraki Makale</span>
         <h2>{{title}}</h2>
       </div>
     </a>

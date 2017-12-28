@@ -1,2 +1,19 @@
 <script type="text/javascript" src="{{asset "js/app.min.js"}}"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/locale/tr.js"></script>
+<script type="text/javascript">
+$(document).ready(function () {
+  moment.locale('tr');
+
+  $('.preview__date,.mast__container__date').each(function (i, date) {
+    var $date = $(date);
+        
+    $date.html(
+      moment($date.attr('datetime'))
+        .format('D MMMM, YYYY')
+    );
+  });
+});
+</script>
 {{ghost_foot}}

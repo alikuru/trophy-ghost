@@ -535,14 +535,12 @@
 }
 
 /*
-* Disqus
+* Facebook Comments
 */
-#disqus_thread {
+#facebook-comments {
   width: 90%;
   max-width: $mq-md;
   margin: 0 auto;
-
-  font-family: $font-body;
 
   @media (min-width: $mq-md) {
     width: 55%;
